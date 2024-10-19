@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        // PostItem.js
+        function PostItem({ title, desc, published }) {
+            return (
+                <div className="post-item">
+                    <h2 className="post-title">{title} </h2>
+                    <p className="post-desc">{desc}</p>
+                    <h2 className="post-published">{published} </h2>
+                </div>
+            )
+        }
+
+        //App.js
+        function App() {
+            return (
+                <div id="wrapper">
+                    <PostItem
+                        title="Hello"
+                        desc="123 123"
+                        published="3434"
+                    />
+                    <PostItem
+                        title="Hello 2"
+                        desc="123 123 123"
+                        published="343434"
+                    />
+                    <PostItem
+                        title="Hello"
+                        desc="123 123 123 123"
+                        published="34343434"
+                    />
+                </div>
+            )
+        }
+        // index.js
+        ReactDOM.render(<App />, document.getElementById('root'))
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
